@@ -1,0 +1,25 @@
+--Create a clothing store database
+
+CREATE TABLE coaster_shirts (id integer PRIMARY KEY, gender TEXT, sleeve_length TEXT, color TEXT, price integer, size TEXT);
+
+INSERT INTO coaster_shirts VALUES (1, "Male", "short", "green", 20, "medium");
+INSERT INTO coaster_shirts VALUES (2, "Male", "medium", "blue", 25, "large");
+INSERT INTO coaster_shirts VALUES (3, "Male", "long", "red", 30, "large");
+INSERT INTO coaster_shirts VALUES (4, "Male", "short", "orange", 20, "small");
+INSERT INTO coaster_shirts VALUES (5, "Male", "medium", "yellow", 25, "medium");
+INSERT INTO coaster_shirts VALUES (6, "Female", "long", "purple", 30, "x-small");
+INSERT INTO coaster_shirts VALUES (7, "Female", "short", "pink", 20, "large");
+INSERT INTO coaster_shirts VALUES (8, "Female", "medium", "navy", 25, "x-large");
+INSERT INTO coaster_shirts VALUES (9, "Female", "long", "magenta", 30, "large");
+INSERT INTO coaster_shirts VALUES (10, "Female", "short", "maroon", 20, "small");
+INSERT INTO coaster_shirts VALUES (11, "Unisex", "long", "black", 30, "large");
+INSERT INTO coaster_shirts VALUES (12, "Unisex", "short", "brown", 20, "medium");
+INSERT INTO coaster_shirts VALUES (13, "Unisex", "medium", "white", 25, "x-small");
+INSERT INTO coaster_shirts VALUES (14, "Unisex", "long", "tan", 30, "x-large");
+INSERT INTO coaster_shirts VALUES (15, "Unisex", "short", "neon green", 20, "medium");
+
+--Display the database ordered by price.
+SELECT * FROM coaster_shirts ORDER BY price;
+
+--Sorting each shirt color by price.
+SELECT color, SUM(price) FROM coaster_shirts GROUP BY color;
